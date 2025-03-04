@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="carrera" id="CD7F448E-27F5-9B38-5B48-2046D0BB4B1D" version="3.5">
+<createdBy>Bryan David</createdBy>
+<createdTime>2024-10-01 18:20:21 UTC</createdTime>
+<ownerDesignName>carrera</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>CD7F448E-27F5-9B38-5B48-2046D0BB4B1D</designId>
+</OSDM_Design>

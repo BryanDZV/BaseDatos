@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F74839EA-50E7-E39E-487E-993AA80F5F76" name="prestamos">
+<createdBy>Bryan David</createdBy>
+<createdTime>2024-10-01 19:19:51 UTC</createdTime>
+<ownerDesignName>biblioteca</ownerDesignName>
+<engineerTo>
+<item key="17AA8E7E-4210-CED4-01DE-102835DB7867" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="fecha_prestamo" id="F5F96C63-250E-BE17-30B6-24A705603C77">
+<createdBy>Bryan David</createdBy>
+<createdTime>2024-10-01 19:20:03 UTC</createdTime>
+<ownerDesignName>biblioteca</ownerDesignName>
+<engineerTo>
+<item key="17AA8E7E-4210-CED4-01DE-102835DB7867" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha_devolucion" id="F2CF97E2-261A-D103-899E-3AD280A8655C">
+<createdBy>Bryan David</createdBy>
+<createdTime>2024-10-01 19:20:32 UTC</createdTime>
+<ownerDesignName>biblioteca</ownerDesignName>
+<engineerTo>
+<item key="17AA8E7E-4210-CED4-01DE-102835DB7867" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha_devolucion_real" id="A3AE4F4F-0E79-0203-68F9-636F0F4284CB">
+<createdBy>Bryan David</createdBy>
+<createdTime>2024-10-01 19:20:52 UTC</createdTime>
+<ownerDesignName>biblioteca</ownerDesignName>
+<engineerTo>
+<item key="17AA8E7E-4210-CED4-01DE-102835DB7867" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_unico" id="D3657837-B3AC-2A86-AA54-C7C6E558CE19">
+<createdBy>Bryan David</createdBy>
+<createdTime>2024-10-01 19:34:55 UTC</createdTime>
+<generatorID>29A1C00A-429E-E90D-7A71-33C0362608E4</generatorID>
+<ownerDesignName>biblioteca</ownerDesignName>
+<engineerTo>
+<item key="17AA8E7E-4210-CED4-01DE-102835DB7867" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>34391766-6B24-5EF4-BCB9-10D59A5D6CD5</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="EBCBED38-7AB6-CAD7-985F-97C47D7FE3FF" name="prestamos PK">
+<createdBy>Bryan David</createdBy>
+<createdTime>2024-10-01 19:20:27 UTC</createdTime>
+<ownerDesignName>biblioteca</ownerDesignName>
+<engineerTo>
+<item key="17AA8E7E-4210-CED4-01DE-102835DB7867" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F5F96C63-250E-BE17-30B6-24A705603C77</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

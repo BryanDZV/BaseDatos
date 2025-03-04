@@ -1,0 +1,4 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.multidimensional.MultidimensionalDesign>
+   <object objectType="main_view" objectID="DFBD1BA4-B331-6D22-C5D7-CD2D9C1FD5F0" name="Multidimensional_1" visible="false"/>
+</oracle.dbtools.crest.model.design.multidimensional.MultidimensionalDesign>

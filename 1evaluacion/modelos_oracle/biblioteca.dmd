@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="biblioteca" id="8A117535-2B89-3C5B-1219-03B66C6FD037" version="3.5">
+<createdBy>Bryan David</createdBy>
+<createdTime>2024-10-01 19:10:57 UTC</createdTime>
+<ownerDesignName>biblioteca</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>8A117535-2B89-3C5B-1219-03B66C6FD037</designId>
+</OSDM_Design>

@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="cf" directorySegmentName="seg_0" id="EB29A114-1B56-E855-074E-DEF050FEFB24">
+<createdBy>bryan</createdBy>
+<createdTime>2024-10-02 08:18:39 UTC</createdTime>
+<ownerDesignName>municipios</ownerDesignName>
+<engineerTo>
+<item key="5E62E9FE-48AE-4091-6C4D-F01B3F6CC7B1" value="true"/>
+</engineerTo>
+<targetPk>5744EA5D-AF8A-5D5E-00CD-511E4C0096D6</targetPk>
+<identifying>false</identifying>
+<nameOnSource>cabeza de familia</nameOnSource>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>004EF276-87E3-C349-1173-2FE030F7CF44</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>004EF276-87E3-C349-1173-2FE030F7CF44</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BCD09C27-8481-D79C-D07A-D26160F48C11" name="copia_libro">
+<createdBy>Bryan David</createdBy>
+<createdTime>2024-10-01 19:49:58 UTC</createdTime>
+<ownerDesignName>biblioteca</ownerDesignName>
+<engineerTo>
+<item key="17AA8E7E-4210-CED4-01DE-102835DB7867" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="estado" id="A669F05E-3193-2F37-6A89-8E17F24C18FD">
+<createdBy>Bryan David</createdBy>
+<createdTime>2024-10-01 19:50:18 UTC</createdTime>
+<ownerDesignName>biblioteca</ownerDesignName>
+<engineerTo>
+<item key="17AA8E7E-4210-CED4-01DE-102835DB7867" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="isbn" id="9FECD1EC-1789-D01B-EAFA-4230B396DD1F">
+<createdBy>Bryan David</createdBy>
+<createdTime>2024-10-01 20:23:02 UTC</createdTime>
+<generatorID>5B8B4684-4A83-61EA-8261-2F1364504A53</generatorID>
+<ownerDesignName>biblioteca</ownerDesignName>
+<engineerTo>
+<item key="17AA8E7E-4210-CED4-01DE-102835DB7867" value="true"/>
+</engineerTo>
+<referedAttribute>45404865-A802-D285-4029-9557A4FAA19E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>15</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="25DEE11A-27C6-3312-7854-AC65CAFB242C" name="copia_libro PK">
+<createdBy>Bryan David</createdBy>
+<createdTime>2024-10-01 20:08:51 UTC</createdTime>
+<ownerDesignName>biblioteca</ownerDesignName>
+<engineerTo>
+<item key="17AA8E7E-4210-CED4-01DE-102835DB7867" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>9FECD1EC-1789-D01B-EAFA-4230B396DD1F</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
