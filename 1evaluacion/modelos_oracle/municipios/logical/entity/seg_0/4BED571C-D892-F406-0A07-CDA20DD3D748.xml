@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4BED571C-D892-F406-0A07-CDA20DD3D748" name="VIVIENDA">
+<createdBy>bryan</createdBy>
+<createdTime>2024-10-01 08:44:29 UTC</createdTime>
+<ownerDesignName>municipios</ownerDesignName>
+<engineerTo>
+<item key="5E62E9FE-48AE-4091-6C4D-F01B3F6CC7B1" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_vivienda" id="01AB06B3-1CDB-D25D-337A-95BA840AE85B">
+<createdBy>bryan</createdBy>
+<createdTime>2024-10-01 08:44:52 UTC</createdTime>
+<ownerDesignName>municipios</ownerDesignName>
+<engineerTo>
+<item key="5E62E9FE-48AE-4091-6C4D-F01B3F6CC7B1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="direccion" id="DA28F68E-54B9-D613-55B2-549949BE58FA">
+<createdBy>bryan</createdBy>
+<createdTime>2024-10-01 08:45:17 UTC</createdTime>
+<ownerDesignName>municipios</ownerDesignName>
+<engineerTo>
+<item key="5E62E9FE-48AE-4091-6C4D-F01B3F6CC7B1" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_propietario" id="873EAA94-97CE-70F4-2572-3B3F1BE9AE2B">
+<createdBy>bryan</createdBy>
+<createdTime>2024-10-01 08:45:34 UTC</createdTime>
+<ownerDesignName>municipios</ownerDesignName>
+<engineerTo>
+<item key="5E62E9FE-48AE-4091-6C4D-F01B3F6CC7B1" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_municipio" id="153D4737-956F-2FEA-2D95-3C26656116FE">
+<createdBy>bryan</createdBy>
+<createdTime>2024-10-01 09:04:03 UTC</createdTime>
+<generatorID>42AF19BF-D991-3773-6ED6-325CBF720E44</generatorID>
+<ownerDesignName>municipios</ownerDesignName>
+<engineerTo>
+<item key="5E62E9FE-48AE-4091-6C4D-F01B3F6CC7B1" value="true"/>
+</engineerTo>
+<referedAttribute>5E355399-DF78-34D8-3D05-0FBC2FDE8A19</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D50ABD54-3E42-FD85-D4EB-1DDFFCDF2C0B" name="VIVIENDA PK">
+<createdBy>bryan</createdBy>
+<createdTime>2024-10-01 08:45:16 UTC</createdTime>
+<ownerDesignName>municipios</ownerDesignName>
+<engineerTo>
+<item key="5E62E9FE-48AE-4091-6C4D-F01B3F6CC7B1" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>01AB06B3-1CDB-D25D-337A-95BA840AE85B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

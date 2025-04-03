@@ -1,0 +1,19 @@
+https://www.youtube.com/watch?v=fzwGZOuaI2s
+
+CREACION DE USUARIO
+alter session set "_ORACLE_SCRIPT"= true;
+create user user_developer identified by "123456";
+grant "CONNECT" To user_developer;
+
+
+SELECCIONAR
+
+obtener los nombres y salarios de los empleados que ganan más de 50.000.
+
+SELECT DISTINCT nombre, salario
+FROM empleados
+WHERE salario > 50000;
+
+CONCATENAR
+
+SELECT "EL EMPLEADO" ename || "TRABAJA COMO"|| job AS "EMPLEADO" FROM EMP;
