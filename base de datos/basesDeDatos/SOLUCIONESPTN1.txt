@@ -1,0 +1,146 @@
+Ejercicios de Selección y Proyección
+Listar todos los clientes.
+
+sql
+Copiar código
+SELECT * FROM CUSTOMERS;
+Listar los nombres y ciudades de los clientes.
+
+sql
+Copiar código
+SELECT name, city FROM CUSTOMERS;
+Listar las órdenes realizadas por el cliente con custid 2.
+
+sql
+Copiar código
+SELECT * FROM ORDERS WHERE custid = 2;
+Mostrar el nombre del producto y su precio.
+
+sql
+Copiar código
+SELECT name, price FROM PRODUCTS;
+Ejercicios con Alias y Operaciones Aritméticas
+Mostrar el precio total (cantidad × precio) para cada artículo en la tabla ORDER_ITEMS.
+
+sql
+Copiar código
+SELECT ordid, prodid, quantity, 
+       quantity * price AS total_price
+FROM ORDER_ITEMS
+JOIN PRODUCTS ON ORDER_ITEMS.prodid = PRODUCTS.prodid;
+Listar los empleados con su salario anual (sal × 12).
+
+sql
+Copiar código
+SELECT ename, sal, sal * 12 AS annual_salary FROM EMPLOYEES;
+Ejercicios con DISTINCT
+Obtener las ciudades únicas donde residen los clientes.
+
+sql
+Copiar código
+SELECT DISTINCT city FROM CUSTOMERS;
+Obtener los departamentos únicos en la tabla EMPLOYEES.
+
+sql
+Copiar código
+SELECT DISTINCT deptno FROM EMPLOYEES;
+Ejercicios con WHERE y Operadores de Comparación
+Listar los empleados con salario mayor a 3000.
+
+sql
+Copiar código
+SELECT * FROM EMPLOYEES WHERE sal > 3000;
+Listar los productos cuyo precio está entre 30 y 300.
+
+sql
+Copiar código
+SELECT * FROM PRODUCTS WHERE price BETWEEN 30 AND 300;
+Listar los empleados que no tienen gerente (mgr IS NULL).
+sql
+Copiar código
+SELECT * FROM EMPLOYEES WHERE mgr IS NULL;
+Listar los clientes cuyo nombre comienza con 'A'.
+sql
+Copiar código
+SELECT * FROM CUSTOMERS WHERE name LIKE 'A%';
+Mostrar las órdenes realizadas en noviembre de 2024.
+sql
+Copiar código
+SELECT * FROM ORDERS 
+WHERE order_date BETWEEN DATE '2024-11-01' AND DATE '2024-11-30';
+Ejercicios con JOIN
+Listar las órdenes con el nombre del cliente asociado.
+sql
+Copiar código
+SELECT ORDERS.ordid, CUSTOMERS.name, ORDERS.order_date
+FROM ORDERS
+JOIN CUSTOMERS ON ORDERS.custid = CUSTOMERS.custid;
+Listar los nombres de los productos incluidos en la orden con ordid 101.
+sql
+Copiar código
+SELECT PRODUCTS.name 
+FROM ORDER_ITEMS
+JOIN PRODUCTS ON ORDER_ITEMS.prodid = PRODUCTS.prodid
+WHERE ORDER_ITEMS.ordid = 101;
+Listar los empleados junto con el nombre de su departamento.
+sql
+Copiar código
+SELECT EMPLOYEES.ename, DEPARTMENTS.dname 
+FROM EMPLOYEES
+JOIN DEPARTMENTS ON EMPLOYEES.deptno = DEPARTMENTS.deptno;
+Ejercicios con Agregados y Grupos
+Contar cuántos clientes hay en cada ciudad.
+sql
+Copiar código
+SELECT city, COUNT(*) AS total_customers 
+FROM CUSTOMERS
+GROUP BY city;
+Obtener el salario promedio de los empleados por departamento.
+sql
+Copiar código
+SELECT deptno, AVG(sal) AS avg_salary
+FROM EMPLOYEES
+GROUP BY deptno;
+Listar el producto más caro.
+sql
+Copiar código
+SELECT name, price 
+FROM PRODUCTS
+WHERE price = (SELECT MAX(price) FROM PRODUCTS);
+Ejercicios con Subconsultas
+Listar los clientes que realizaron órdenes.
+sql
+Copiar código
+SELECT * FROM CUSTOMERS
+WHERE custid IN (SELECT custid FROM ORDERS);
+Listar los productos incluidos en órdenes realizadas por el cliente 'Alice'.
+sql
+Copiar código
+SELECT DISTINCT PRODUCTS.name
+FROM PRODUCTS
+JOIN ORDER_ITEMS ON PRODUCTS.prodid = ORDER_ITEMS.prodid
+JOIN ORDERS ON ORDER_ITEMS.ordid = ORDERS.ordid
+WHERE ORDERS.custid = (SELECT custid FROM CUSTOMERS WHERE name = 'Alice');
+Ejercicios con ORDER BY
+Listar los empleados ordenados por salario de forma descendente.
+sql
+Copiar código
+SELECT * FROM EMPLOYEES ORDER BY sal DESC;
+Listar los productos ordenados por precio, de menor a mayor.
+sql
+Copiar código
+SELECT * FROM PRODUCTS ORDER BY price ASC;
+Ejercicios con UNION y Funciones
+Unir las ciudades de clientes y ubicaciones de departamentos en una sola lista.
+sql
+Copiar código
+SELECT city FROM CUSTOMERS
+UNION
+SELECT loc FROM DEPARTMENTS;
+Mostrar el número de órdenes realizadas por cada cliente.
+sql
+Copiar código
+SELECT CUSTOMERS.name, COUNT(ORDERS.ordid) AS total_orders
+FROM CUSTOMERS
+LEFT JOIN ORDERS ON CUSTOMERS.custid = ORDERS.custid
+GROUP BY CUSTOMERS.name;

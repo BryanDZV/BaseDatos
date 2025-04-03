@@ -1,0 +1,127 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F655BF3F-7751-37AC-BB63-51A88F412F76" name="ALUMNO">
+<createdBy>Bryan David</createdBy>
+<createdTime>2024-10-01 18:31:18 UTC</createdTime>
+<ownerDesignName>carrera</ownerDesignName>
+<engineerTo>
+<item key="A51466B1-3C3C-85F4-CD33-8D2683821D60" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="matricula" id="CA7479FC-675D-E3FE-DE0D-DDAE59A847C2">
+<createdBy>Bryan David</createdBy>
+<createdTime>2024-10-01 18:31:40 UTC</createdTime>
+<ownerDesignName>carrera</ownerDesignName>
+<engineerTo>
+<item key="A51466B1-3C3C-85F4-CD33-8D2683821D60" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre" id="B29975A0-B2C6-5D6E-EDB8-92EAE5B929DC">
+<createdBy>Bryan David</createdBy>
+<createdTime>2024-10-01 18:32:12 UTC</createdTime>
+<ownerDesignName>carrera</ownerDesignName>
+<engineerTo>
+<item key="A51466B1-3C3C-85F4-CD33-8D2683821D60" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha_regsitro" id="97150ED2-911C-5FC0-2E97-7F6565C6548A">
+<createdBy>Bryan David</createdBy>
+<createdTime>2024-10-01 18:32:39 UTC</createdTime>
+<ownerDesignName>carrera</ownerDesignName>
+<engineerTo>
+<item key="A51466B1-3C3C-85F4-CD33-8D2683821D60" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="trabaja" id="2EDC02BC-0D22-C8EE-3B4C-9648BFE0FE86">
+<createdBy>Bryan David</createdBy>
+<createdTime>2024-10-01 18:33:21 UTC</createdTime>
+<ownerDesignName>carrera</ownerDesignName>
+<engineerTo>
+<item key="A51466B1-3C3C-85F4-CD33-8D2683821D60" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="promedio" id="3DACF5B7-75DA-BAF7-DA0C-9C89FF5CB305">
+<createdBy>Bryan David</createdBy>
+<createdTime>2024-10-01 18:34:15 UTC</createdTime>
+<ownerDesignName>carrera</ownerDesignName>
+<engineerTo>
+<item key="A51466B1-3C3C-85F4-CD33-8D2683821D60" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,5,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="edad" id="71F78841-636A-FE27-943C-66757B8C9192">
+<createdBy>Bryan David</createdBy>
+<createdTime>2024-10-01 18:42:54 UTC</createdTime>
+<ownerDesignName>carrera</ownerDesignName>
+<engineerTo>
+<item key="A51466B1-3C3C-85F4-CD33-8D2683821D60" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="clave" id="34438A3B-97F9-C17E-183A-7683F200B1F6">
+<createdBy>Bryan David</createdBy>
+<createdTime>2024-10-01 18:45:37 UTC</createdTime>
+<generatorID>9259D6CF-86C4-CA86-C6C9-C82060299EDC</generatorID>
+<ownerDesignName>carrera</ownerDesignName>
+<engineerTo>
+<item key="A51466B1-3C3C-85F4-CD33-8D2683821D60" value="true"/>
+</engineerTo>
+<referedAttribute>D04EE091-C6D2-022F-9D98-8DC6C56E24DE</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>5 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="DDEB0763-005A-C0D5-C666-9052A87A8AB4" name="Atributos PK">
+<createdBy>Bryan David</createdBy>
+<createdTime>2024-10-01 18:32:08 UTC</createdTime>
+<ownerDesignName>carrera</ownerDesignName>
+<engineerTo>
+<item key="A51466B1-3C3C-85F4-CD33-8D2683821D60" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>CA7479FC-675D-E3FE-DE0D-DDAE59A847C2</attributeRef>
+<attributeRef>34438A3B-97F9-C17E-183A-7683F200B1F6</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
