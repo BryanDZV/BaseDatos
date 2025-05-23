@@ -1,0 +1,21 @@
+#,Ejercicio tipo examen
+1,1. Crea un paquete PAQ_USUARIOS que contenga un procedimiento que reciba un ID de usuario y muestre su nombre y multa actual.
+2,"2. En el mismo paquete, crea una función que devuelva el número total de usuarios con multa superior a 0."
+3,"3. Crea un procedimiento que reciba un ISBN y devuelva el título, autor y género usando parámetros OUT."
+4,4. Crea un procedimiento con un parámetro IN OUT que aumente una cantidad al saldo_multa y devuelva el nuevo saldo.
+5,5. Crea una función que devuelva todos los libros de un género usando un cursor y una colección (sin usar BULK COLLECT).
+6,6. Crea un trigger que detecte si la FECHA_DEVOLUCION de PRESTAMO se actualiza y actualice el SALDO_MULTA según días de retraso.
+7,7. Crea un trigger que impida que un préstamo tenga fecha de devolución menor que la fecha de préstamo.
+8,"8. Crea un trigger que registre en una tabla AUDITORIA_USUARIOS (ID, FECHA, ACCION) cada vez que se borra un usuario."
+9,9. Crea un trigger que incremente una columna CONTADOR en USUARIO cada vez que se inserte un nuevo préstamo.
+10,10. Crea un trigger que detecte cambios en el género de un libro y los registre en una tabla LOG_GENERO_CAMBIOS.
+11,11. Crea una consulta que muestre el usuario con más préstamos realizados.
+12,12. Muestra un listado de libros que nunca han sido prestados.
+13,13. Muestra los usuarios que tienen más de un préstamo activo (sin fecha de devolución).
+14,14. Muestra el libro más prestado junto con el número de veces que se ha prestado.
+15,15. Muestra los libros cuyo tiempo promedio de devolución ha sido mayor a 10 días.
+16,16. Crea una vista V_LIBROS_POPULARES que muestre los libros prestados más de 2 veces.
+17,17. Crea un paquete PAQ_REPORTES que tenga un procedimiento para mostrar todos los préstamos con más de 15 días de duración.
+18,18. Crea una función que devuelva la cantidad de devoluciones con observaciones que contengan la palabra 'retraso'.
+19,19. Crea una función que devuelva un BOOLEAN indicando si un usuario tiene todos sus préstamos devueltos.
+20,20. Crea un procedimiento que recorra con cursor todos los préstamos sin devolver y los muestre por pantalla.

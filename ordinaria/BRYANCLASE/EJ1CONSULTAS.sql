@@ -1,0 +1,31 @@
+------------------------------------------------------------------------
+-- EJERCICIO 1.1 -- | -- SELECT ENAME, SAL FROM EMP WHERE sal >= 2850;              
+------------------------------------------------------------------------
+-- EJERCICIO 1.2 -- | -- SELECT ENAME, DEPTNO FROM EMP WHERE EMPNO = 7566;          
+------------------------------------------------------------------------
+-- EJERCICIO 1.3 -- | -- SELECT ENAME, SAL FROM EMP WHERE SAL < 1500 OR SAL > 2850; 
+------------------------------------------------------------------------
+-- EJERCICIO 1.4 (REVISAR) -- | -- SELECT ENAME, JOB, HIREDATE FROM EMP WHERE HIREDATE > '20-02-1981' OR HIREDATE < '01-05-1981'; mal
+------------------------------------------------------------------------
+-- EJERCICIO 1.5 -- | -- SELECT ENAME, DEPTNO FROM EMP WHERE DEPTNO IN (10, 30) ORDER BY 1;
+------------------------------------------------------------------------
+-- EJERCICIO 1.6 -- | -- SELECT ENAME AS Empleado, SAL AS "Sueldo mensual" FROM EMP WHERE DEPTNO IN (10, 30) and SAL > 1500;
+------------------------------------------------------------------------
+-- EJERCICIO 1.7 -- | -- SELECT ENAME, HIREDATE FROM EMP WHERE HIREDATE BETWEEN '01-01-1982' AND '31-12-1982';
+------------------------------------------------------------------------
+-- EJERCICIO 1.8 -- | -- SELECT ENAME, JOB, MGR FROM EMP WHERE MGR IS NULL;
+------------------------------------------------------------------------
+-- EJERCICIO 1.9 -- | -- SELECT ENAME, SAL, COMM FROM EMP WHERE COMM IS NOT NULL ORDER BY SAL DESC, COMM DESC;
+------------------------------------------------------------------------
+-- EJERCICIO 1.10 - | -- SELECT ENAME FROM EMP WHERE ENAME LIKE '__A%';
+------------------------------------------------------------------------
+-- EJERCICIO 1.11 - | -- SELECT ENAME, DEPTNO FROM EMP WHERE ENAME LIKE '%L%L%' AND DEPTNO = 30 OR MGR = '7782';
+------------------------------------------------------------------------
+-- EJERCICIO 1.12 - | -- SELECT ENAME, JOB, SAL FROM EMP WHERE (JOB = 'CLERK' OR JOB = 'ANALYST') AND SAL NOT IN (1000, 3000, 5000);
+------------------------------------------------------------------------
+-- EJERCICIO 1.13 - | -- SELECT ENAME, SAL, COMM FROM EMP WHERE COMM > SAL * 1.10;
+------------------------------------------------------------------------
+
+
+
+------------------------------- GABRIEL RODRIGUEZ 1º DAW -------

@@ -1,0 +1,22 @@
+----------------------------------- CONSULTAS EJERCICIO 2 ---------------------------------
+-------------------------------------------------------------------------------------------
+-- EJERCICIO 2.1 -- | -- SELECT SYSDATE AS FECHA FROM DUAL;     B
+-------------------------------------------------------------------------------------------
+-- EJERCICIO 2.2 -- | -- SELECT ENAME,EMPNO, SAL, CAST(SAL * 1.15 AS INT) AS "SALARIO 2" FROM EMP;          
+-------------------------------------------------------------------------------------------
+-- EJERCICIO 2.3 -- | -- SELECT ENAME,EMPNO, SAL, CAST(SAL * 1.15 AS INT) AS "SALARIO 2", CAST(SAL * 1.15 AS INT) - SAL AS "DIFERENCIA" FROM EMP; B
+-------------------------------------------------------------------------------------------
+-- EJERCICIO 2.4 -- | -- SELECT ENAME AS "NOMBRE", HIREDATE AS "FECHA_CONTRATACION", ADD_MONTHS(HIREDATE, 6) AS "FECHA_REVISION" FROM EMP; B
+-------------------------------------------------------------------------------------------
+-- EJERCICIO 2.5 -- | -- SELECT ENAME AS "NOMBRE", HIREDATE AS "FECHA_CONTRATACION", CEIL(MONTHS_BETWEEN(SYSDATE, HIREDATE)) AS "MESES_EMPLEADO" FROM EMP ORDER BY "MESES_EMPLEADO" DESC; B
+-- Selecciona el nombre, fecha de contratación y los meses trabajados (redondeados hacia arriba) de los empleados, ordenándolos por meses trabajados en orden descendente. B
+-------------------------------------------------------------------------------------------
+-- EJERCICIO 2.6 -- | -- SELECT ENAME || ' gana ' || SAL || ' mensualmente pero quiere ' || (SAL * 3) AS "MENSAJE" FROM EMP; B
+-------------------------------------------------------------------------------------------
+-- EJERCICIO 2.7 -- | -- SELECT ENAME AS "NOMBRE", LPAD(SAL, 15, '$') AS "SALARIO" FROM EMP; B
+-------------------------------------------------------------------------------------------
+-- EJERCICIO 2.8 -- | -- SELECT INITCAP(ENAME) AS "NOMBRE", LENGTH(ENAME) AS "LONGITUD" FROM EMP WHERE ENAME LIKE 'J%' OR ENAME LIKE 'A%' OR ENAME LIKE 'M%'; B
+-------------------------------------------------------------------------------------------
+
+
+----------------------------------- GABRIEL RODRIGUEZ | 1º DAW ----------------------------

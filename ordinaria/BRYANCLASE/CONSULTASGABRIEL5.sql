@@ -1,0 +1,31 @@
+----------------------------- CONSULTAS V ----------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+-- EJERCICIO 01 -- | -- SELECT ENAME, HIREDATE, DEPTNO FROM EMP WHERE DEPTNO = (SELECT DEPTNO FROM EMP WHERE ENAME = 'BLAKE') AND ENAME <> 'BLAKE';
+----------------------------------------------------------------------------------------------------------
+-- EJERCICIO 02 -- | -- SELECT EMPNO, ENAME FROM EMP WHERE SAL > (SELECT AVG(SAL) FROM EMP) ORDER BY SAL DESC;
+----------------------------------------------------------------------------------------------------------
+-- EJERCICIO 03 -- | -- SELECT EMPNO, ENAME FROM EMP WHERE DEPTNO IN (SELECT DISTINCT DEPTNO FROM EMP WHERE ENAME LIKE '%T%');
+----------------------------------------------------------------------------------------------------------
+-- EJERCICIO 04 -- | -- SELECT ENAME, JOB, DEPTNO FROM EMP WHERE DEPTNO = (SELECT DEPTNO FROM DEPT WHERE LOC = 'DALLAS');
+----------------------------------------------------------------------------------------------------------
+-- EJERCICIO 05 -- | -- SELECT ENAME, SAL FROM EMP WHERE MGR =(SELECT EMPNO FROM EMP WHERE ENAME='KING');
+----------------------------------------------------------------------------------------------------------
+-- EJERCICIO 06 -- | -- SELECT EMPNO, ENAME, JOB FROM EMP WHERE DEPTNO=(SELECT DEPTNO FROM DEPT WHERE DNAME = 'SALES');
+----------------------------------------------------------------------------------------------------------
+-- EJERCICIO 07 -- | -- SELECT E.EMPNO, E.ENAME, E.SAL FROM EMP E WHERE E.SAL > (SELECT AVG(SAL) FROM EMP) AND EXISTS ( SELECT 1 FROM EMP E2 WHERE E2.DEPTNO = E.DEPTNO AND E2.ENAME LIKE '%T%');
+----------------------------------------------------------------------------------------------------------
+-- EJERCICIO 08 -- | -- SELECT E.ENAME, E.DEPTNO, E.SAL FROM EMP E WHERE (E.DEPTNO, E.SAL) IN (SELECT E2.DEPTNO, E2.SAL FROM EMP E2 WHERE E2.COMM IS NOT NULL);
+-- EJERCICIO 08 V2 | -- SELECT ENAME, DEPTNO, SAL FROM EMP WHERE (DEPTNO, SAL) IN (SELECT DEPTNO, SAL FROM EMP WHERE COMM IS NOT NULL);
+----------------------------------------------------------------------------------------------------------
+-- EJERCICIO 09 M? | -- SELECT E.ENAME, E.DEPTNO, E.SAL FROM EMP E WHERE (E.SAL, E.COMM) IN (SELECT E2.SAL, E2.COMM FROM EMP E2 JOIN DEPT D ON E2.DEPTNO = D.DEPTNO WHERE D.LOC = 'DALLAS'); 
+-- EJERCICIO 09 V2 | -- SELECT ENAME, DEPTNO, SAL COMMM FROM EMP WHERE (SAL, NVL(COMM, -1)) IN (SELECT SAL, NVL(COMM, -1) FROM EMP WHERE DEPTNO=(SELECT DEPTNO FROM DEPT WHERE LOC='DALLAS'));
+----------------------------------------------------------------------------------------------------------
+-- EJERCICIO 10 X? | -- SELECT E.ENAME, E.HIREDATE, E.SAL FROM EMP E WHERE (E.SAL, E.COMM) = (SELECT E2.SAL, E2.COMM FROM EMP E2 WHERE E2.ENAME = 'Scott');
+-- EJERCICIO 10 V2 | -- SELECT ENAME, HIREDATE, SAL, COMM FROM EMP WHERE (SAL, NVL(COMM, -1)) = (SELECT SAL, NVL(COMM, -1) FROM EMP WHERE ENAME='SCOTT');
+----------------------------------------------------------------------------------------------------------
+-- EJERCICIO 11 -- | -- SELECT E.ENAME, E.SAL, JOB FROM EMP E WHERE E.SAL > ALL (SELECT E1.SAL FROM EMP E1 WHERE JOB='CLERK') ORDER BY E.SAL DESC;
+----------------------------------------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------- 1º DAW -------------------------------------
+------------------------------------------------------------------- GABRIEL RODRIGUEZ HERNANDEZ -------------------------

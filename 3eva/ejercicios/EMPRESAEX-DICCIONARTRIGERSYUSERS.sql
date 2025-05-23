@@ -1,0 +1,114 @@
+/*Ejercicio 1: Consultar triggers en tu esquema*/
+SELECT TRIGGER_NAME
+FROM USER_TRIGGERS;
+/*Ejercicio 2: Consultar triggers sobre una tabla específica*/
+SELECT *
+FROM USER_TRIGGERS
+WHERE TABLE_NAME='EMP';
+/*Consultar triggers de otros usuarios*/
+SELECT OWNER,TRIGGER_NAME
+FROM ALL_TRIGGERS
+WHERE TABLE_NAME='EMP';
+/*Consultar el código de un trigger específico*/
+SELECT text
+FROM all_source
+WHERE NAME = 'TRG_EMP';
+
+/*Ejercicio 5: Ver detalles de los triggers en la base de datos*/
+SELECT *
+FROM DBA_TRIGGERS;
+
+/*Ejercicio 6: Ver triggers deshabilitados*/
+SELECT trigger_name, status
+FROM user_triggers
+WHERE status = 'DISABLE';
+
+/*7: Ver triggers activos*/
+SELECT trigger_name, status
+FROM USER_TRIGGERS
+WHERE status = 'ENABLED';
+/
+/*8: Crear un trigger para una tabla*/
+CREATE TABLE AUDITAR_DEPT(
+FECHA DATE,
+DEPARTAMENT NUMBER,
+NOMBRE_DEPARTAMENTO VARCHAR2(300),
+LOCALIDAD VARCHAR2(300),
+OPERACION VARCHAR(300));
+/
+DROP TABLE AUDITAR_DEPT;
+/
+CREATE OR REPLACE TRIGGER TRG_DEPT
+AFTER INSERT OR UPDATE ON DEPT
+FOR EACH ROW
+DECLARE
+BEGIN
+  IF INSERTING THEN
+    INSERT INTO AUDITAR_DEPT
+    VALUES (SYSDATE, :NEW.DEPTNO, :NEW.DNAME, :NEW.LOC, 'INSERTADO');
+  
+  ELSIF UPDATING THEN
+    INSERT INTO AUDITAR_DEPT
+    VALUES (SYSDATE, :NEW.DEPTNO, :NEW.DNAME, :NEW.LOC, 'ACTUALIZACION');
+  END IF;
+END;
+/
+
+/
+DECLARE
+BEGIN
+INSERT INTO DEPT
+VALUES(79,'PEDO','PEDORRO');
+END;
+/
+SELECT *
+FROM AUDITAR_DEPT;
+/
+/*CREAR UN NUEVO DEPTNO*/
+DECLARE
+BEGIN
+  -- 1. Crear primero el nuevo departamento (si no existe)
+  INSERT INTO DEPT (DEPTNO, DNAME, LOC)
+  VALUES (60, 'NUEVO', 'NUEVALOC');
+
+  -- 2. Ahora actualizar los empleados
+  UPDATE EMP
+  SET DEPTNO = 60 -- Nuevo DEPTNO
+  WHERE DEPTNO = 65; -- Viejo DEPTNO
+
+  -- 3. (Opcional) Borrar el viejo departamento si ya no quieres el 65
+  DELETE FROM DEPT
+  WHERE DEPTNO = 65;
+END;
+/*ACTUALIZACION DE UNA PK*/
+-- 1. Eliminar temporalmente la clave foránea
+ALTER TABLE EMP
+DROP CONSTRAINT FK_DEPTNO;
+
+-- 2. Actualizar el DEPTNO en DEPT
+UPDATE DEPT
+SET DEPTNO = 65
+WHERE DEPTNO = 66;
+
+-- 3. Actualizar el DEPTNO en EMP
+UPDATE EMP
+SET DEPTNO = 65
+WHERE DEPTNO = 66;
+
+-- 4. Volver a crear la clave foránea
+ALTER TABLE EMP
+ADD CONSTRAINT FK_DEPTNO
+FOREIGN KEY (DEPTNO)
+REFERENCES DEPT(DEPTNO);
+
+/
+DELETE FROM DEPT
+WHERE DEPTNO=79;
+/
+SELECT *
+FROM USER_TRIGGERS;
+DROP TRIGGER TRG_CAMBIOS_DEPT;
+
+
+
+ROLLBACK;
